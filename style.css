@@ -67,6 +67,7 @@
 #info-input {
   width: 30px;
   height: 20px;
+  cursor: pointer;
 }
 #info-input i {
   font-size: 20px;
