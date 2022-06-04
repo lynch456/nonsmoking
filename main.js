@@ -1,9 +1,13 @@
 const currentDate = document.getElementById("date");
-
+const menuToggle = document.getElementById("menu-bar");
 let newDate = new Date();
 let date = [newDate.getFullYear(), newDate.getDay(), newDate.getDate()];
 
 currentDate.textContent = `${date[0]}년 ${date[1]}월 ${date[2]}일`;
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("on");
+});
 
 const timerDay = document.getElementById("day");
 const timerHour = document.getElementById("hour");
