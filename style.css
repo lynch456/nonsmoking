@@ -1,9 +1,7 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background-color: #3f3f3f;
-}
+
 #wrap {
   width: 500px;
   height: 600px;
@@ -92,6 +90,15 @@ body {
 }
 .hide {
   display: none;
+}
+#info-header {
+  display: flex;
+  justify-content: space-between;
+}
+#close-btn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 #currentday {
   text-align: center;

@@ -49,18 +49,21 @@ const moneyCount = document.getElementById("money");
 
 numberCount.textContent = "0개비";
 moneyCount.textContent = "0원";
+
 let money = 0;
 let number = 0;
 let moneyId;
 let numberId;
 function moneyCounting() {
-  money += 4500 / 86400;
+  money += pricePack / 86400;
   moneyCount.textContent = `${money.toFixed(1)}원`;
+  console.log(money);
 }
 
 function numberCounting() {
-  number += 20 / 86400;
+  number += pieceSmoke / 86400;
   numberCount.textContent = `${number.toFixed(1)}개비`;
+  console.log(number);
 }
 const endButton = document.getElementById("end-btn");
 
