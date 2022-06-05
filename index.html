@@ -21,10 +21,21 @@
       </div>
       <div id="user-info" class="hide">
         <span>당신의 흡연 정보를 입력해 주세요</span>
-        <div id="current-date"></div>
-        <div id="current-time"></div>
-        <div id="amount"></div>
-        <div id="price"></div>
+        <div id="input-date">
+          <div id="current-date"><input type="date" id="dateValue" /></div>
+          <div id="current-time">time</div>
+        </div>
+        <div id="input-info">
+          <div id="amount">
+            <span>하루 흡연량(개비)</span>
+            <span id="piece"></span>
+          </div>
+          <div id="price">
+            <span>담배 한 갑당 가격</span>
+            <input type="text" id="pack"></input>
+          </div>
+        </div>
+        <button id="start-btn"></button>
       </div>
       <div id="currentday">
         <span id="date"></span>
@@ -34,7 +45,17 @@
         <span id="hour"></span>
         <span id="min"></span>
         <span id="sec"></span>
-        <button id="start-btn"></button>
+        <div id="count-box">
+          <div id="number-box">
+            <span>참은 개비</span>
+            <span id="number"></span>
+          </div>
+          <div id="money-box">
+            <span>모은 금액</span>
+            <span id="money"></span>
+          </div>
+        </div>
+        <button id="end-btn"></button>
       </div>
     </div>
 
