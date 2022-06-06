@@ -11,12 +11,14 @@
   <body>
     <div id="wrap">
       <div id="header">
-        <div id="menu-bar">
-          <span></span>
+        <div id="health-check">
+          <i class="fas fa-heartbeat"></i>
+          <span>건강체크</span>
         </div>
         <h1>금연 타이머</h1>
         <div id="info-input">
           <i class="fas fa-pen"></i>
+          <span>정보입력</span>
         </div>
       </div>
       <div id="user-info" class="hide">
@@ -25,20 +27,16 @@
           <div id="close-btn">❌</div>
         </div>
 
-        <div id="input-date">
-          <div id="current-date"><input type="date" id="dateValue" /></div>
-          <div id="current-time">time</div>
-        </div>
         <div id="input-info">
           <div id="amount">
             <span>하루 흡연량(개비)</span>
-            <form>
+            <form onsubmit="return false;" id="piece-box">
               <input type="text" id="piece" value="" />
             </form>
           </div>
           <div id="price">
             <span>담배 한 갑당 가격</span>
-            <form>
+            <form onsubmit="return false;" id="pack-box">
               <input type="text" id="pack" value="" />
             </form>
           </div>
@@ -65,7 +63,19 @@
         </div>
         <button id="end-btn"></button>
       </div>
-    </div>
+      <div id="health-container">
+        <span>건강 정보</span>
+          <div id="health-progress">
+            <div id="progress-bar">
+              <div id="gage"></div>
+            </div>
+            <span>
+              혈압과 맥박이 정상적으로 떨어지고, 손과 발의 온도가 정상적으로
+              돌아옵니다
+            </span>
+          </div>
+        </div>
+      <div id="money-container"></div>  
 
     <script
       src="https://kit.fontawesome.com/625155bc66.js"
@@ -73,5 +83,6 @@
     ></script>
     <script src="main.js"></script>
     <script src="userInfo.js"></script>
+    <script src="health.js"></script>
   </body>
 </html>

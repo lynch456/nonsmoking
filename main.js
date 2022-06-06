@@ -5,10 +5,6 @@ let date = [newDate.getFullYear(), newDate.getMonth() + 1, newDate.getDate()];
 
 currentDate.textContent = `${date[0]}년 ${date[1]}월 ${date[2]}일`;
 
-menuToggle.addEventListener("click", () => {
-  menuToggle.classList.toggle("on");
-});
-
 const timerDay = document.getElementById("day");
 const timerHour = document.getElementById("hour");
 const timerMin = document.getElementById("min");
@@ -55,13 +51,13 @@ let number = 0;
 let moneyId;
 let numberId;
 function moneyCounting() {
-  money += pricePack / 86400;
+  money += pricePack.value / 86400;
   moneyCount.textContent = `${money.toFixed(1)}원`;
   console.log(money);
 }
 
 function numberCounting() {
-  number += pieceSmoke / 86400;
+  number += pieceSmoke.value / 86400;
   numberCount.textContent = `${number.toFixed(1)}개비`;
   console.log(number);
 }
@@ -73,4 +69,16 @@ endButton.addEventListener("click", () => {
   clearInterval(timeId);
   clearInterval(moneyId);
   clearInterval(numberId);
+  day = 0;
+  hour = 0;
+  min = 0;
+  sec = 0;
+  money = 0;
+  number = 0;
+  timerDay.textContent = "00일";
+  timerHour.textContent = "00시간";
+  timerMin.textContent = "00분";
+  timerSec.textContent = "00초";
+  numberCount.textContent = "0개비";
+  moneyCount.textContent = "0원";
 });

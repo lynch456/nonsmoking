@@ -6,15 +6,8 @@ const chooseDateValue = document.getElementById("dateValue");
 const startButton = document.getElementById("start-btn");
 const modalClose = document.getElementById("close-btn");
 
-const pricePack = document.getElementById("pack").value;
-const pieceSmoke = document.getElementById("piece").value;
-
-let priceValue = pricePack;
-
-const charge = document.getElementById("asdf");
-charge.addEventListener("click", () => {
-  console.log(priceValue);
-});
+const pricePack = document.getElementById("pack");
+const pieceSmoke = document.getElementById("piece");
 
 startButton.textContent = "금연시작";
 

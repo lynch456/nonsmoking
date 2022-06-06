@@ -14,79 +14,61 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
 }
-#menu-bar {
+#health-check {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
-  width: 30px;
+  width: 100px;
   height: 20px;
   cursor: pointer;
 }
-#menu-bar span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: rgba(0, 0, 0, 1);
-  transition: all 0.3s;
+#health-check i {
+  padding-bottom: 5px;
+  font-size: 20px;
 }
-#menu-bar span::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  width: 30px;
-  height: 3px;
-  background-color: black;
-  transition: all 0.3s;
+#health-check span {
+  font-size: 12px;
 }
 
-#menu-bar span::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 30px;
-  height: 3px;
-  background-color: black;
-  transition: all 0.3s;
-}
-#menu-bar.on span {
-  background-color: rgba(0, 0, 0, 0);
-  transition: all 0.3s;
-}
-#menu-bar.on span::before {
-  top: 50%;
-  transform: rotate(45deg);
-  transition: all 0.3s;
-}
-#menu-bar.on span::after {
-  top: 50%;
-  transform: rotate(-45deg);
-  transition: all 0.3s;
-}
 #info-input {
-  width: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
   height: 20px;
   cursor: pointer;
 }
 #info-input i {
+  padding-bottom: 5px;
   font-size: 20px;
+}
+#info-input span {
+  font-size: 12px;
 }
 #user-info {
   width: 350px;
-  height: 500px;
+  height: 200px;
   border: 1px solid black;
   position: absolute;
   left: 70px;
   background: #fff;
+  text-align: center;
+  padding: 10px;
+  top: 30%;
 }
 #input-date {
   display: flex;
 }
+#amount {
+  margin-right: 10px;
+}
+#price {
+  margin-left: 10px;
+}
 #input-info {
   display: flex;
+  justify-content: center;
+  padding: 20px 0;
 }
 .hide {
   display: none;
@@ -94,19 +76,48 @@
 #info-header {
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
 }
 #close-btn {
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
+#start-btn {
+  margin: 0 auto;
+  width: 150px;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+#piece {
+  border: none;
+  outline: none;
+  width: 50px;
+  text-align: center;
+}
+#piece-box {
+  border-bottom: 1px solid black;
+}
+#pack {
+  border: none;
+  outline: none;
+  width: 50px;
+  text-align: center;
+}
+#pack-box {
+  border-bottom: 1px solid black;
+}
 #currentday {
   text-align: center;
+  padding: 30px 0;
 }
 #timer-container {
   text-align: center;
 }
 #count-box {
+  padding: 30px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -124,4 +135,39 @@
 }
 #end-btn {
   margin: 0 auto;
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+#health-container {
+}
+#health-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#health-progress span {
+  font-size: 12px;
+}
+#progress-bar {
+  width: 50px;
+  height: 5px;
+  border: 1px solid black;
+}
+#gage {
+  width: 0%;
+  height: 100%;
+  background-color: aqua;
+  animation: gageAni 3s linear both;
+}
+
+@keyframes gageAni {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
