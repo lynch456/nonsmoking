@@ -53,13 +53,11 @@ let numberId;
 function moneyCounting() {
   money += pricePack.value / 86400;
   moneyCount.textContent = `${money.toFixed(1)}원`;
-  console.log(money);
 }
 
 function numberCounting() {
   number += pieceSmoke.value / 86400;
   numberCount.textContent = `${number.toFixed(1)}개비`;
-  console.log(number);
 }
 const endButton = document.getElementById("end-btn");
 
@@ -69,12 +67,14 @@ endButton.addEventListener("click", () => {
   clearInterval(timeId);
   clearInterval(moneyId);
   clearInterval(numberId);
+  clearInterval(progressId);
   day = 0;
   hour = 0;
   min = 0;
   sec = 0;
   money = 0;
   number = 0;
+  gageBar.value = "0";
   timerDay.textContent = "00일";
   timerHour.textContent = "00시간";
   timerMin.textContent = "00분";

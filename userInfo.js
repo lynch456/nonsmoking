@@ -10,14 +10,17 @@ const pricePack = document.getElementById("pack");
 const pieceSmoke = document.getElementById("piece");
 
 startButton.textContent = "금연시작";
+let count = 0;
 
 inputInfo.addEventListener("click", () => {
   userInfo.classList.remove("hide");
 });
 startButton.addEventListener("click", () => {
-  timeId = setInterval(timerStart, 500);
-  moneyId = setInterval(moneyCounting, 500);
-  numberId = setInterval(numberCounting, 500);
+  timeId = setInterval(timerStart, 1);
+  moneyId = setInterval(moneyCounting, 1);
+  numberId = setInterval(numberCounting, 1);
+  progressId = setInterval(progress, 1);
+  console.log(progressId);
   userInfo.classList.add("hide");
 });
 modalClose.addEventListener("click", () => {
