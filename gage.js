@@ -1,4 +1,5 @@
-const gageBar = document.getElementsByClassName("gage");
+const healthCheck = document.getElementById("health-check");
+const healthContainer = document.getElementById("health-container");
 let progressId;
 function progress() {
   document.getElementById("twentyGage").value += (1 * 100) / 1200;
@@ -16,3 +17,7 @@ function progress() {
   document.getElementById("tenYearGage").value += (1 * 100) / 3.154e8;
   document.getElementById("fifteenthYearGage").value += (1 * 100) / 4.73e8;
 }
+
+healthCheck.addEventListener("click", () => {
+  healthContainer.classList.toggle("hidden");
+});
